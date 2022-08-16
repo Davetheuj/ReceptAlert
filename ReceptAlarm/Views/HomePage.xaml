@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReceptAlarm.Views.HomePage"
+             xmlns:vm="clr-namespace:ReceptAlarm.ViewModels">
+
+    <ContentPage.Content>
+        <StackLayout Spacing="0" BackgroundColor="#FF333333" >
+            <Label 
+                x:Name="header"
+                Text="Sound Notifications Off"
+                TextColor = "White"
+                HorizontalTextAlignment="Center"
+                BackgroundColor="DarkSalmon"
+                VerticalOptions="Fill" 
+                HorizontalOptions="FillAndExpand" 
+                />
+
+            <Label 
+                Text=""
+                TextColor = "White"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Fill"
+                />
+
+            <Label 
+                x:Name="speedLabel"
+                Text="Current Connection Speed: ~"
+                TextColor = "White"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Fill"
+                PropertyChanged="speedLabel_PropertyChanged"
+                />
+
+            <Label 
+                Text=""
+                TextColor = "White"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Fill"
+                />
+
+            <Label 
+                Text=""
+                TextColor = "White"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Fill"
+                />
+
+            <Label 
+                Text=""
+                TextColor = "White"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Fill"
+                />
+
+            <Label 
+                Text=""
+                TextColor = "White"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Fill"
+                />
+
+            <Label 
+                FontSize="Caption"
+                Text="Alarm Reception Threshold"
+                TextColor = "White"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Fill"
+                />
+
+            <Slider 
+                x:Name="thresholdSlider"
+                ThumbColor="White"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Fill"
+                ValueChanged="thresholdSlider_ValueChanged"
+                Value="0"
+                />
+            <Label 
+                x:Name="thresholdLabel"
+                FontSize="Caption"
+                Text=".1 kB/s"
+                TextColor = "White"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Fill"
+                />
+
+
+            <Label 
+                Text=""
+                TextColor = "White"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Fill"
+                />
+
+            <Label 
+                Text=""
+                TextColor = "White"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Fill"
+                />
+
+
+
+
+            <Label 
+                x:Name="toggleLabel"
+                FontSize="Caption"
+                Text="Alert when reception is gained"
+                TextColor = "White"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Fill"
+                />
+            <Switch 
+                x:Name="notifyReceptionGainToggle"
+                HorizontalOptions="CenterAndExpand" 
+                BackgroundColor="#00000000" 
+                OnColor="LightSeaGreen" 
+                ThumbColor="White"  
+                Toggled="NotifyReceptionGainToggle_Toggled"
+            />
+            <Label 
+                x:Name="statusLabel"
+                Text="Off"
+                TextColor = "White"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Fill"
+                />
+            <Label 
+                Text=""
+                TextColor = "White"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Fill"
+                />
+
+
+
+            <Label 
+                x:Name="toggleLossLabel"
+                FontSize="Caption"
+                Text="Alert when reception is lost"
+                TextColor = "White"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Fill"
+                />
+            <Switch 
+                x:Name="notifyReceptionLossToggle"
+                HorizontalOptions="CenterAndExpand" 
+                BackgroundColor="#00000000" 
+                OnColor="LightSeaGreen" 
+                ThumbColor="White"  
+                Toggled="NotifyReceptionLossToggle_Toggled"
+            />
+            <Label 
+                x:Name="statusLossLabel"
+                Text="Off"
+                TextColor = "White"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Fill"
+                />
+            <Label 
+                Text=""
+                TextColor = "White"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Fill"
+                />
+            <Label 
+                Text=""
+                TextColor = "White"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Fill"
+                />
+            <Label 
+                Text=""
+                TextColor = "White"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Fill"
+                />
+
+
+            <Label 
+               
+                Text="Set the threshold slider to your desired connectivity level.
+                "
+                TextColor = "White"
+                
+                VerticalOptions="Fill" 
+                HorizontalOptions="Start"
+/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReceptAlarm.Views.AboutPage"
+             xmlns:vm="clr-namespace:ReceptAlarm.ViewModels"
+             Title="{Binding Title}">
+    
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+    
+ 
+       
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10" BackgroundColor="#FF333333">
+                <Label Text="Hey there, adventurer!" FontSize="Title" TextColor="White"/>
+            <Label  TextColor="White"/>
+            <Label Text="I spend a lot of time driving around in low reception areas, but I also love staying connected with my family, friends, and emergency services, so having reception is important to me. It was dangerous to be constantly checking my phone to see if I had reception or not, so I developed this app as a solution!" TextColor="White"/>
+            <Label Text="I have plans to add some really cool features to this app so make sure you check it out in the future! That being said, if you have any feedback or features that you would like implemented, send me an email!" TextColor="White"/>
+           
+            <Label  TextColor="White"    Text ="Dave@ThirdPartition.com" />
+            <Label  TextColor="White"/>
+            <Label  TextColor="White"/>
+            <Label  TextColor="White"/>
+            <Label Text="I'm delighted to provide this app free of charge. In addition to this, I'll never harvest and distribute your data, or display any advertisements." TextColor="White"/>
+            <Label  TextColor="White"/>
+            <Label Text="...So if you love ReceptAlert and appreciate my continued support and development, please consider donating!" TextColor="White"/>
+
+            <Button Margin="0,10,0,0" Text="Donate" 
+                        Command="{Binding OpenWebCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+            </StackLayout>
+        </ScrollView>
+        
+ 
+
+</ContentPage>
