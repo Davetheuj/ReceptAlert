@@ -101,19 +101,22 @@ namespace ReceptAlarm.Views
             gainToggle = (Switch)sender;
             if (gainToggle.IsToggled)
             {
-                header.Text = "Sound Notifications On!";
                 statusLabel.Text = "On";
-                if (notifyReceptionLossToggle.IsToggled)
-                {
-                    header.BackgroundColor = Color.LightSeaGreen;
-                }
+            }
+            else
+            {
+                statusLabel.Text = "Off";
+            }
+
+            if (notifyReceptionGainToggle.IsToggled || notifyReceptionLossToggle.IsToggled)
+            {
+                header.Text = "Sound Notifications On!";
+                header.BackgroundColor = Color.LightSeaGreen;
             }
             else
             {
                 header.Text = "Sound Notifications Off";
-                statusLabel.Text = "Off";
                 header.BackgroundColor = Color.DarkSalmon;
-
             }
         }
 
@@ -122,21 +125,27 @@ namespace ReceptAlarm.Views
             lossToggle = (Switch)sender;
             if (lossToggle.IsToggled)
             {
-                header.Text = "Sound Notifications On!";
                 statusLossLabel.Text = "On";
-                if (notifyReceptionGainToggle.IsToggled)
-                {
-                    header.BackgroundColor = Color.LightSeaGreen;
-                }
 
             }
             else
             {
-                header.Text = "Sound Notifications Off";
                 statusLossLabel.Text = "Off";
-                header.BackgroundColor = Color.DarkSalmon;
 
             }
+            
+            
+            if (notifyReceptionGainToggle.IsToggled || notifyReceptionLossToggle.IsToggled)
+            {
+                header.Text = "Sound Notifications On!";
+                header.BackgroundColor = Color.LightSeaGreen;
+            }
+            else
+            {
+                header.Text = "Sound Notifications Off";
+                header.BackgroundColor = Color.DarkSalmon;
+            }
+
         }
 
 
